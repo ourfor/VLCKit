@@ -3,21 +3,21 @@
 
 import PackageDescription
 
-let vlcBinary = Target.binaryTarget(name: "VLCKit-all", url: "file:///Users/endpne/Code/iPlay.iOS/library/VLCKit/.tmp/VLCKit-all.xcframework.zip", checksum: "56ae77afee47c5a61fe6c8954769021fcb6a729de169dd4261aad9fd29557fbf")
+let vlcBinary = Target.binaryTarget(name: "VLCKit-all", url: "https://drive.macmini.lan/library/VLCKit-all.xcframework.zip", checksum: "56ae77afee47c5a61fe6c8954769021fcb6a729de169dd4261aad9fd29557fbf")
 
 let package = Package(
-    name: "VLCKit",
+    name: "MOVLCKit",
     platforms: [.macOS(.v10_13), .iOS(.v11), .tvOS(.v11)],
     products: [
         .library(
-            name: "MobileVLCKit",
-            targets: ["MobileVLCKit"]),
+            name: "MOVLCKit",
+            targets: ["MOVLCKit"]),
     ],
     dependencies: [],
     targets: [
         vlcBinary,
         .target(
-            name: "MobileVLCKit",
+            name: "MOVLCKit",
             dependencies: [
                 .target(name: "VLCKit-all")
             ], linkerSettings: [
