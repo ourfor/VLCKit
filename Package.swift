@@ -10,14 +10,14 @@ let package = Package(
     platforms: [.macOS(.v10_13), .iOS(.v11), .tvOS(.v11)],
     products: [
         .library(
-            name: "VLCKitSPM",
-            targets: ["VLCKitSPM"]),
+            name: "MobileVLCKit",
+            targets: ["MobileVLCKit"]),
     ],
     dependencies: [],
     targets: [
         vlcBinary,
         .target(
-            name: "VLCKitSPM",
+            name: "MobileVLCKit",
             dependencies: [
                 .target(name: "VLCKit-all")
             ], linkerSettings: [
